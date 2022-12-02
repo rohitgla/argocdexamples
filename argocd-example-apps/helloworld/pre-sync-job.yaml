@@ -11,7 +11,7 @@ spec:
       containers:
       - name: istio-installation
         image: rohita/istio-install:latest
-        imagePullPolicy: Always
+        # imagePullPolicy: Always
         envFrom:
           - secretRef:
               name: ra-secret
