@@ -2,7 +2,7 @@
 namePrefix: helloworld-
 
 bases:
-- ./helloworld
+- ./helloworld.yml
 
 resources:
 - pre-sync-job.yaml
