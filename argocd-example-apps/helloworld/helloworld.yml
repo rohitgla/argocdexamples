@@ -5,9 +5,6 @@ metadata:
   labels:
     app: httpd
   namespace: default
-  annotations:
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   containers:
     - name: httpd
