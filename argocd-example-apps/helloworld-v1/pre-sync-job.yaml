@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: helloworldjob
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    # argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+      - name: istio-installation
+        image: rohita/istio-install:latest
+        envFrom:
+          - secretRef:
+              name: ra-secret
+        command: ["/bin/bash", "./istio_install.sh"]
+      restartPolicy: Never
