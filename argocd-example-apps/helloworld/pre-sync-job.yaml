@@ -16,5 +16,4 @@ spec:
               name: ra-secret
         command: ["/bin/bash", "./istio_install.sh"]
       restartPolicy: Never
-  backoffLimit: 0
 
